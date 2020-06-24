@@ -7,9 +7,11 @@ public class FirstServlet extends javax.servlet.http.HttpServlet {
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+        String name = request.getParameter("name");
+
         PrintWriter printWriter = response.getWriter();
         printWriter.println("<html>");
-        printWriter.println("<h1>Hello world!<h1>");
+        printWriter.println("<h1>Hello " + name + "<h1>");
         printWriter.println("</html>");
 
 
