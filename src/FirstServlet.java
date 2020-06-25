@@ -1,3 +1,4 @@
+import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -13,6 +14,9 @@ public class FirstServlet extends javax.servlet.http.HttpServlet {
         printWriter.println("<html>");
         printWriter.println("<h1>Hello " + name + "<h1>");
         printWriter.println("</html>");
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/testJsp.jsp");
+        dispatcher.forward(request, response);
 
 
     }
