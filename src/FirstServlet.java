@@ -12,16 +12,19 @@ public class FirstServlet extends javax.servlet.http.HttpServlet {
         HttpSession session = request.getSession();
 
 
-//        Cart cart = (Cart)session.getAttribute("cart");
-//         String name = request.getParameter("name");
-//         int quantity = Integer.parseInt(request.getParameter("quantity"));
-//
-//        if(cart == null) {
-//            cart = new Cart();
-//            cart.setName(name);
-//            cart.setQuantity(quantity);
-//        }
-//        session.setAttribute( "cart", cart);
+        Cart cart = (Cart)session.getAttribute("cart");
+
+        String name = request.getParameter("name");
+        int quantity = Integer.parseInt(request.getParameter("quantity"));
+
+        if(cart == null) {
+            cart = new Cart();
+            cart.setName(name);
+            cart.setQuantity(quantity);
+        }
+        session.setAttribute( "cart", cart);
+        //session.invalidate();
+
 
 
 

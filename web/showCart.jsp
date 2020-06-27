@@ -16,5 +16,6 @@
     <% Cart cart = (Cart) session.getAttribute("cart"); %>
     <p>Наименование: <%= cart.getName()%></p>
     <p>Количество: <%=cart.getQuantity()%></p>
+    <% //session.invalidate(); %>
 </body>
 </html>
